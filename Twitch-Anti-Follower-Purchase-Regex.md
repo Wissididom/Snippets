@@ -1,1 +1,1 @@
-`.*(?:Buy|Get) (?:(?:viewers|followers|primes|and),? ?)+ on .+\. ?(?:\w|-|\. ?)+`
+`.*(?:Buy|Get) (?:(?:viewers|followers|primes|and|or),? ?)+ on .+\. ?(?:\w|-|\. ?)+`
