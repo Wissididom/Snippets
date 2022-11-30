@@ -1,8 +1,8 @@
 ### Regex
-`.*(?:(?:viewers|followers|primes|and|or) ?,? ?)+ on \w+ *\. *(?:\w|-|\. ?)+`
+`(?:.*(?:(?:channel|viewers|views|followers|primes|chat bots|and|or) ?,? ?)+ on \w+ *\. *(?:\w|-|\. ?)+|.*offer promotion of *(?:your )?(?:(?:channel|viewers|views|followers|primes|chat bots|and|or) ?,? ?)+)`
 
 ### Nightbot (-> Spam Protection -> Blacklist Word/Phrases):
-`~/.*(?:(?:viewers|followers|primes|and|or) ?,? ?)+ on \w+ *\. *(?:\w|-|\. ?)+/gi`
+`~/(?:.*(?:(?:channel|viewers|views|followers|primes|chat bots|and|or) ?,? ?)+ on \w+ *\. *(?:\w|-|\. ?)+|.*offer promotion of *(?:your )?(?:(?:channel|viewers|views|followers|primes|chat bots|and|or) ?,? ?)+)/gi`
 
 ### StreamElements (-> Spam filters -> Banned Words), Streamlabs (-> Cloudbot -> Mod Tools -> Word Protection -> Blacklist) or Fossabot (untested) (Moderation -> Blocked terms (There is a button to enable Regex whose text is `(.*)`)):
-`.*(?:(?:viewers|followers|primes|and|or) ?,? ?)+ on \w+ *\. *(?:\w|-|\. ?)+`
+`(?:.*(?:(?:channel|viewers|views|followers|primes|chat bots|and|or) ?,? ?)+ on \w+ *\. *(?:\w|-|\. ?)+|.*offer promotion of *(?:your )?(?:(?:channel|viewers|views|followers|primes|chat bots|and|or) ?,? ?)+)`
