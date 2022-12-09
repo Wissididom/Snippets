@@ -1,0 +1,19 @@
+Message: https://discord.com/assets/93bfa1dfb04a26bbe11a8359f8515372.mp3
+Deafen: https://discord.com/assets/0fded79f3e117e2354dc9e4414e81f6e.mp3
+Undeafen: https://discord.com/assets/87a494e4d66936f2b3b4d0655e7c5186.mp3
+Mute: https://discord.com/assets/8d4672844c0b64927c30390de1d9ca8d.mp3
+Unmute: https://discord.com/assets/87e93acdc240cffbf402318ee698e8c4.mp3
+Voice Disconnected: https://discord.com/assets/07d35e78d984760c932936d39e562d09.mp3
+PTT Activate: https://discord.com/assets/d4de309e478528dde3b61936b6b2ef90.mp3
+PTT Deactivate: https://discord.com/assets/edbd1eb44fea4a0b47314ddf0c1a2620.mp3
+User Join: https://discord.com/assets/2421764d6b0516cf74ebed18009f5173.mp3
+User Leave: https://discord.com/assets/fc544d1057f7480494e1e961b8a23f19.mp3
+User Moved: https://discord.com/assets/97f52bf6c5909f04fbb94aaeccd82859.mp3
+Outgoing Ring: https://discord.com/assets/84c9eeb905be64bd9f5dc8b19eec89ea.mp3
+Incoming Ring: https://discord.com/assets/efc06bf335f3fa81003e0e758ffde4da.mp3
+Halloween Incoming Ring: https://discord.com/assets/15b48ed7383b702ad2a3e9a0f7ebd2c0.mp3
+Stream Started: https://discord.com/assets/312229c42b9f649d207aa5d207985d74.mp3
+Stream Stopped: https://discord.com/assets/b9a656f925ed809585eac6a3bfbf0ddb.mp3
+Viewer Join: https://discord.com/assets/2362295d01606d5b2fa72db71ef6b121.mp3
+Viewer Leave: https://discord.com/assets/27b9e9e678d919a1ab6dbb6336291de1.mp3
+Invited to Speak: https://discord.com/assets/0100c36e9032a9a528e5e65dc7ab7d4f.mp3
