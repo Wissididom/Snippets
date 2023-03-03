@@ -26,4 +26,4 @@ Example Configuration:
 Create an Action and take Twitch->Moderation->TimeoutUser as Sub-Action (Make sure you have the Type set to `Redeemer`)
 
 ##### If you want to ban the offender:
-Create an Action and take Twitch->Moderation->BanUser as SubAction (Use %userName% as userLogin)
+Create an Action and take Twitch->Moderation->BanUser as SubAction (Use `%userName%` as userLogin)
