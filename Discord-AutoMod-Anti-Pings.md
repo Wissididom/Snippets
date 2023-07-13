@@ -11,4 +11,4 @@
 `@everyone,@here` (Normal)
 
 ### Example Setup
-TODO: Screenshot
+![Discord-AutoMod-Anti-Pings](assets/Discord-AutoMod-Anti-Pings.png)
