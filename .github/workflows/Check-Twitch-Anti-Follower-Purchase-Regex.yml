@@ -14,37 +14,41 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Check Best viewers on ***
+        if: always()
         uses: Wissididom/regex-match-checker@main
         with:
           text: Best viewers on ***
           regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
           flags: g
-          fail-on-match: Off
-          fail-on-no-match: On
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Komm Stream-Promotion ru
+        if: always()
         uses: Wissididom/regex-match-checker@main
         with:
           text: Komm Stream-Promotion ru. Bewerben Sie Ihren Kanal, Zuschauer, Follower, Ansichten, Chat-Bots. Viele Angebote für verschiedene Plattformen. Automatischer Start. Reaktionsschneller Support 24/7
           regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
           flags: g
-          fail-on-match: Off
-          fail-on-no-match: On
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Come stream-promotion ru
+        if: always()
         uses: Wissididom/regex-match-checker@main
         with:
           text: Come stream-promotion ru. Promote your channel, viewers, followers, views, chat bots. Many offers for different platforms. Autostart. Responsive support 24\7
           regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
           flags: g
-          fail-on-match: Off
-          fail-on-no-match: On
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Маch еiпе Google-Suche
+        if: always()
         uses: Wissididom/regex-match-checker@main
         with:
           text: Маch еiпе Google-Suche mit dеm Stiсhwоrt \"streamhub world\" Еs ist eiпе Орtioп, dort Zиschauеr zu еrwеrьеn Iсh haьe еs dоrt рersönliсh еrwоrbеn
           regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
           flags: g
-          fail-on-match: Off
-          fail-on-no-match: On
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check hallo HeyGuys, hier ist ein Promo-Code für 10 Zuschauer
         run: |
           if [[ "hallo HeyGuys, hier ist ein Promo-Code für 10 Zuschauer: GVP-0M1J-Q63H-C4M5. Google: get vi ew ers . pro" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
