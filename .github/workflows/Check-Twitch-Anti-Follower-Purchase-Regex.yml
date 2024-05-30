@@ -1,0 +1,187 @@
+name: Check Twitch-Anti-Follower-Purchase-Regex
+
+on:
+  push:
+    branches: ["master", "main"]
+  pull_request:
+    branches: ["master", "main"]
+
+jobs:
+  check-regex:
+    name: Check Regex
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check Best viewers on ***
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Best viewers on ***
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Komm Stream-Promotion ru
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Komm Stream-Promotion ru. Bewerben Sie Ihren Kanal, Zuschauer, Follower, Ansichten, Chat-Bots. Viele Angebote für verschiedene Plattformen. Automatischer Start. Reaktionsschneller Support 24/7
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Come stream-promotion ru
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Come stream-promotion ru. Promote your channel, viewers, followers, views, chat bots. Many offers for different platforms. Autostart. Responsive support 24\7
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Маch еiпе Google-Suche
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Маch еiпе Google-Suche mit dеm Stiсhwоrt \"streamhub world\" Еs ist eiпе Орtioп, dort Zиschauеr zu еrwеrьеn Iсh haьe еs dоrt рersönliсh еrwоrbеn
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check hallo HeyGuys, hier ist ein Promo-Code für 10 Zuschauer
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: 'hallo HeyGuys, hier ist ein Promo-Code für 10 Zuschauer: GVP-0M1J-Q63H-C4M5. Google: get vi ew ers . pro'
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check hallo HeyGuys, hier ist ein Promo-Code für 10 Zuschauer
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: 'Habt einen guten Stream! HeyGuys 100 Zuschauer für nur ~$0.5? EZ mit get view ers. pro! Schnapp dir eine Promo für 10 kostenlose Viewer: GVP-MJQ3-E46M-GNN2'
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Hello!! Only for your stream
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: 'Hello!! Only for your stream : follow bits prime views on ***'
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Improver your channel
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Improver your channel on ***
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Wanna become famous
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Wanna become famous? Buy followers, primesubs , viewers bits on mystrm. store
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Upgrade your stream
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Upgrade your stream on ***
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Hello! All for your channel
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Hello! All for your channel on ***
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrades?\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Hi! viewers subprime or follows on rebrand.ly
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Hi! viewers subprime or follows on rebrand.ly/r85bn5k
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Hi , my friend! Everything for your stream is.gd
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Hi , my friend! Everything for your stream is.gd/89zf1l
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check All for your stream
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: All for your stream on mountviewers. com (primes viewers follow)
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check Hi. I want to offer promotion
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Hi. I want to offer promotion of your channel, viewers, followers, views, chat bots. The price is lower than any competitor, the quality is guaranteed to be the best. Auto-on. Incredibly flexible and convenient order management panel, everything is in your hands, turn it on/off/customize. Go to dogehype dot com
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: false
+          fail-on-no-match: true
+      - name: Check false positive 1
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: With the zombies distracted, open the partially raised garage door on the left to get inside. Watch out for the zombies inside. Go behind the counter into the adjacent room. On the shelf by the door is the box of chocolates
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: true
+          fail-on-no-match: false
+      - name: Check false positive 2
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: >
+            Btw... ich hatte vorgestern meine letzte (mündliche) Abiprüfung und hab' die bestanden bewitc10Hype Zwar "nur" mit 6 Punkten, aber war auch hardcore nervös währenddessen und hatte davor den absolut grottigsten Schlaf bewitc10S
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: true
+          fail-on-no-match: false
+      - name: Check false positive 3
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: "Ich hab' nur geschrieben, dass ich meine mündliche Abiprüfung bestanden habe bewitc10Mad"
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: true
+          fail-on-no-match: false
+      - name: Check false positive 4
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: alles wie in genshin. wenn doppelt dann upgrade
+          regex: (?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:\bBest\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\bZuschauer für nur\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)
+          flags: gi
+          fail-on-match: true
+          fail-on-no-match: false
