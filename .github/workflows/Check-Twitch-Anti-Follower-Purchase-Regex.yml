@@ -155,5 +155,5 @@ jobs:
           text: With the zombies distracted, open the partially raised garage door on the left to get inside. Watch out for the zombies inside. Go behind the counter into the adjacent room. On the shelf by the door is the box of chocolates
           regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
           flags: g
-          fail-on-match: false
-          fail-on-no-match: true
+          fail-on-match: true
+          fail-on-no-match: false
