@@ -19,7 +19,7 @@ jobs:
           text: Best viewers on ***
           regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
           flags: g
-          fail-on-match: false,
+          fail-on-match: false
           fail-on-no-match: true
       - name: Check Komm Stream-Promotion ru
         uses: Wissididom/regex-match-checker@main
@@ -27,7 +27,7 @@ jobs:
           text: Komm Stream-Promotion ru. Bewerben Sie Ihren Kanal, Zuschauer, Follower, Ansichten, Chat-Bots. Viele Angebote für verschiedene Plattformen. Automatischer Start. Reaktionsschneller Support 24/7
           regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
           flags: g
-          fail-on-match: false,
+          fail-on-match: false
           fail-on-no-match: true
       - name: Check Come stream-promotion ru
         uses: Wissididom/regex-match-checker@main
@@ -35,7 +35,7 @@ jobs:
           text: Come stream-promotion ru. Promote your channel, viewers, followers, views, chat bots. Many offers for different platforms. Autostart. Responsive support 24\7
           regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
           flags: g
-          fail-on-match: false,
+          fail-on-match: false
           fail-on-no-match: true
       - name: Check Маch еiпе Google-Suche
         run: |
