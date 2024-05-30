@@ -1,0 +1,22 @@
+name: Check Twitch-Anti-Follower-Purchase-Regex
+
+on:
+  push:
+    branches: ["master", "main"]
+  pull_request:
+    branches: ["master", "main"]
+
+jobs:
+  check-regex:
+    name: Check Regex
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check Regex
+        run: |
+          if [[ "$date" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
+            echo "Regex Match"
+          else
+            echo "Doesn't match"
+          fi
