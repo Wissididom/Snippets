@@ -59,79 +59,101 @@ jobs:
           fail-on-match: false
           fail-on-no-match: true
       - name: Check hallo HeyGuys, hier ist ein Promo-Code für 10 Zuschauer
-        run: |
-          if [[ "Habt einen guten Stream! HeyGuys 100 Zuschauer für nur ~$0.5? EZ mit get view ers. pro! Schnapp dir eine Promo für 10 kostenlose Viewer: GVP-MJQ3-E46M-GNN2" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches Habt einen guten Stream! HeyGuys 100 Zuschauer für nur ~$0.5? EZ mit get view ers. pro! Schnapp dir eine Promo für 10 kostenlose Viewer: GVP-MJQ3-E46M-GNN2"
-          else
-            echo "Regex doesn't match Habt einen guten Stream! HeyGuys 100 Zuschauer für nur ~$0.5? EZ mit get view ers. pro! Schnapp dir eine Promo für 10 kostenlose Viewer: GVP-MJQ3-E46M-GNN2"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: 'Habt einen guten Stream! HeyGuys 100 Zuschauer für nur ~$0.5? EZ mit get view ers. pro! Schnapp dir eine Promo für 10 kostenlose Viewer: GVP-MJQ3-E46M-GNN2'
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Hello!! Only for your stream
-        run: |
-          if [[ "Hello!! Only for your stream : follow bits prime views on ***" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches Hello!! Only for your stream : follow bits prime views on ***"
-          else
-            echo "Regex doesn't match Hello!! Only for your stream : follow bits prime views on ***"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: 'Hello!! Only for your stream : follow bits prime views on ***'
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Improver your channel
-        run: |
-          if [[ "Improver your channel on ***" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches Improver your channel on ***"
-          else
-            echo "Regex doesn't match Improver your channel on ***"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Improver your channel on ***
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Wanna become famous
-        run: |
-          if [[ "Wanna become famous? Buy followers, primesubs , viewers bits on mystrm. store" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches Wanna become famous? Buy followers, primesubs , viewers bits on mystrm. store"
-          else
-            echo "Regex doesn't match Wanna become famous? Buy followers, primesubs , viewers bits on mystrm. store"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Wanna become famous? Buy followers, primesubs , viewers bits on mystrm. store
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Upgrade your stream
-        run: |
-          if [[ "Upgrade your stream on ***" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches Upgrade your stream on ***"
-          else
-            echo "Regex doesn't match Upgrade your stream on ***"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Upgrade your stream on ***
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Hello! All for your channel
-        run: |
-          if [[ "Hello! All for your channel on ***" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches Hello! All for your channel on ***"
-          else
-            echo "Regex doesn't match Hello! All for your channel on ***"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Hello! All for your channel on ***
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Hi! viewers subprime or follows on rebrand.ly
-        run: |
-          if [[ "Hi! viewers subprime or follows on rebrand.ly/r85bn5k" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches Hi! viewers subprime or follows on rebrand.ly/r85bn5k"
-          else
-            echo "Regex doesn't match Hi! viewers subprime or follows on rebrand.ly/r85bn5k"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Hi! viewers subprime or follows on rebrand.ly/r85bn5k
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Hi , my friend! Everything for your stream is.gd
-        run: |
-          if [[ "Hi , my friend! Everything for your stream is.gd/89zf1l" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches Hi , my friend! Everything for your stream is.gd/89zf1l"
-          else
-            echo "Regex doesn't match Hi , my friend! Everything for your stream is.gd/89zf1l"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Hi , my friend! Everything for your stream is.gd/89zf1l
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check All for your stream
-        run: |
-          if [[ "All for your stream on mountviewers. com (primes viewers follow)" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches All for your stream on mountviewers. com (primes viewers follow)"
-          else
-            echo "Regex doesn't match All for your stream on mountviewers. com (primes viewers follow)"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: All for your stream on mountviewers. com (primes viewers follow)
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check Hi. I want to offer promotion
-        run: |
-          if [[ "Hi. I want to offer promotion of your channel, viewers, followers, views, chat bots. The price is lower than any competitor, the quality is guaranteed to be the best. Auto-on. Incredibly flexible and convenient order management panel, everything is in your hands, turn it on/off/customize. Go to dogehype dot com" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches Hi. I want to offer promotion of your channel, viewers, followers, views, chat bots. The price is lower than any competitor, the quality is guaranteed to be the best. Auto-on. Incredibly flexible and convenient order management panel, everything is in your hands, turn it on/off/customize. Go to dogehype dot com"
-          else
-            echo "Regex doesn't match Hi. I want to offer promotion of your channel, viewers, followers, views, chat bots. The price is lower than any competitor, the quality is guaranteed to be the best. Auto-on. Incredibly flexible and convenient order management panel, everything is in your hands, turn it on/off/customize. Go to dogehype dot com"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: Hi. I want to offer promotion of your channel, viewers, followers, views, chat bots. The price is lower than any competitor, the quality is guaranteed to be the best. Auto-on. Incredibly flexible and convenient order management panel, everything is in your hands, turn it on/off/customize. Go to dogehype dot com
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
       - name: Check false positive
-        run: |
-          if [[ "With the zombies distracted, open the partially raised garage door on the left to get inside. Watch out for the zombies inside. Go behind the counter into the adjacent room. On the shelf by the door is the box of chocolates" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
-            echo "Regex matches With the zombies distracted, open the partially raised garage door on the left to get inside. Watch out for the zombies inside. Go behind the counter into the adjacent room. On the shelf by the door is the box of chocolates"
-          else
-            echo "Regex doesn't match With the zombies distracted, open the partially raised garage door on the left to get inside. Watch out for the zombies inside. Go behind the counter into the adjacent room. On the shelf by the door is the box of chocolates"
-          fi
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
+          text: With the zombies distracted, open the partially raised garage door on the left to get inside. Watch out for the zombies inside. Go behind the counter into the adjacent room. On the shelf by the door is the box of chocolates
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: false
+          fail-on-no-match: true
