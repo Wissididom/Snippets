@@ -161,6 +161,16 @@ jobs:
         if: always()
         uses: Wissididom/regex-match-checker@main
         with:
+          text: >
+            Btw... ich hatte vorgestern meine letzte (mündliche) Abiprüfung und hab' die bestanden bewitc10Hype Zwar "nur" mit 6 Punkten, aber war auch hardcore nervös währenddessen und hatte davor den absolut grottigsten Schlaf bewitc10S
+          regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
+          flags: g
+          fail-on-match: true
+          fail-on-no-match: false
+      - name: Check false positive 3
+        if: always()
+        uses: Wissididom/regex-match-checker@main
+        with:
           text: "Ich hab' nur geschrieben, dass ich meine mündliche Abiprüfung bestanden habe bewitc10Mad"
           regex: (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world)
           flags: g
