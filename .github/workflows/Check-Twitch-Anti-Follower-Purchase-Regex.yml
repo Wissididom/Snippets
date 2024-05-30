@@ -111,7 +111,7 @@ jobs:
           else
             echo "Regex doesn't match All for your stream on mountviewers. com (primes viewers follow)"
           fi
-      - name: Check All for your stream
+      - name: Check Hi. I want to offer promotion
         run: |
           if [[ "Hi. I want to offer promotion of your channel, viewers, followers, views, chat bots. The price is lower than any competitor, the quality is guaranteed to be the best. Auto-on. Incredibly flexible and convenient order management panel, everything is in your hands, turn it on/off/customize. Go to dogehype dot com" =~ (?:(?:All|Everything|Only) for your (?:stream|channel).*(?:primes|viewers|follow| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:channel|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|[o0]r|subprime|follows|primesubs|bits) ?,? ?)+ on \w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+|(?:Best|Upgrade|Improver?|.*[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f|Bewerben Sie|Promote) *(?:Ihren |your )?(?:(?:Kanal|channel|stream|viewers|views|f[o0]ll[o0]wers|primes|chat b[o0]ts|and|[o0]r) ?,? ?)+|Zuschauer für nur|hier ist (?:eine?)? ?Promo|streamhub world) ]]; then
             echo "Regex matches Hi. I want to offer promotion of your channel, viewers, followers, views, chat bots. The price is lower than any competitor, the quality is guaranteed to be the best. Auto-on. Incredibly flexible and convenient order management panel, everything is in your hands, turn it on/off/customize. Go to dogehype dot com"
