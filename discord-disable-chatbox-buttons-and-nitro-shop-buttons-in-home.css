@@ -1,0 +1,9 @@
+/* Chatbox buttons */
+div[aria-label="Start an Activity"] { display: none; }
+button[aria-label="Send a gift"] { display: none; }
+
+/* Hide Nitro button in Home */
+a[href="/store"] { display: none; }
+
+/* Hide shop button in Home */
+a[href="/shop"] { display: none; }
