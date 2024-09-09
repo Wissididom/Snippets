@@ -1,7 +1,11 @@
+# Archived
+
+**I don't want to maintain this regex anymore, for moderating those bots I recommend using Sery_Bot.**
+
 ### Regex
 `(?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ [̀-ͯ᪰-᫿᷀-᷿⃐-⃿︠-︯]?on (?:\*\*\*|\w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+)|(?:\bBe[̀-ͯ᪰-᫿᷀-᷿⃐-⃿︠-︯]?st\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\b(?:Zuschauer|viewers?)(?: kostenlos| für nur| for free)\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)`
 
-### Nightbot (-> Spam Protection -> Blacklist Word/Phrases):
+### Nightbot (-> Chat Moderation -> Blacklist Words/Phrases):
 `~/(?:(?:\bAll\b|\bEverything\b|\bOnly\b) for your (?:\bstream\b|\bchannel?\b).*(?:\bprimes?\b|\bviewers?\b|\bfollows?\b| ?(?:\w*\. ?\w*|\*\*\*))|.*(?:(?:\bchannels?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b|\bsubprimes?\b|\bfollows?\b|\bprimesubs?\b|\bbits?\b) ?,? ?)+ [̀-ͯ᪰-᫿᷀-᷿⃐-⃿︠-︯]?on (?:\*\*\*|\w+ *(?:\.|dot) *(?:\w|-|(?:\.|dot) ?)+)|(?:\bBe[̀-ͯ᪰-᫿᷀-᷿⃐-⃿︠-︯]?st\b|\bUpgrade\b|\bImprover?|.*\b[o0]ffer pr[o0]m[o0]ti[o0]n [o0]f\b|\bBewerben Sie\b|\bPromote\b) *(?:Ihren |your )?(?:(?:\bKanals?\b|\bchannels?\b|\bstreams?\b|\bviewers?\b|\bviews?\b|\bf[o0]ll[o0]wers?\b|\bprimes?\b|\bchat b[o0]ts?\b) ?,? ?)+|\b(?:Zuschauer|viewers?)(?: kostenlos| für nur| for free)\b|\bhier ist (?:eine?)? ?Promo\b|\bstreamhub world\b)/gi`
 
 ### StreamElements (-> Spam filters -> Banned Words), Streamlabs (-> Cloudbot -> Mod Tools -> Word Protection -> Blacklist) or Fossabot (untested) (Moderation -> Blocked terms (There is a button to enable Regex whose text is `(.*)`)):
